@@ -2,6 +2,10 @@ package net.excession.mathgame;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.io.BufferedReader;
 
 public class GameActivity extends Activity {
 
@@ -10,6 +14,35 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        // Initial
+        // Initialize the variables
+        int partA = 2;
+        int partB = 2;
+        int correctAnswer = partA * partB;
+        int wrongAnswer1 = correctAnswer - 1;
+        int wrongAnswer2 = correctAnswer + 1;
+
+        /*
+        Here we get a working object based on either the Button or TextView class
+        and base as well as link our new objects directly to the apropos UI elements
+        which we previously created.
+         */
+
+        TextView textObjectPartA = (TextView) findViewById(R.id.textPartA);
+        TextView textObjectPartB = (TextView) findViewById(R.id.textPartB);
+        Button buttonObjectChoice1 = (Button) findViewById(R.id.buttonChoice1);
+        Button buttonObjectChoice2 = (Button) findViewById(R.id.buttonChoice2);
+        Button buttonObjectChoice3 = (Button) findViewById(R.id.buttonChoice3);
+
+        /*
+        Now we use setText method of our objexts to show variable values on the UI elements
+         */
+        textObjectPartA.setText("" + partA);
+        textObjectPartB.setText("" + partB);
+
+        buttonObjectChoice1.setText("" + correctAnswer);
+        buttonObjectChoice2.setText("" + wrongAnswer1);
+        buttonObjectChoice3.setText("" + wrongAnswer2);
+
+
     }
 }
