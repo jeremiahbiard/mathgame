@@ -27,11 +27,11 @@ public class GameActivity extends Activity {
         which we previously created.
          */
 
-        TextView textObjectPartA = (TextView) findViewById(R.id.textPartA);
-        TextView textObjectPartB = (TextView) findViewById(R.id.textPartB);
-        Button buttonObjectChoice1 = (Button) findViewById(R.id.buttonChoice1);
-        Button buttonObjectChoice2 = (Button) findViewById(R.id.buttonChoice2);
-        Button buttonObjectChoice3 = (Button) findViewById(R.id.buttonChoice3);
+        TextView textObjectPartA = findViewById(R.id.textPartA);
+        TextView textObjectPartB = findViewById(R.id.textPartB);
+        Button buttonObjectChoice1 = findViewById(R.id.buttonChoice1);
+        Button buttonObjectChoice2 = findViewById(R.id.buttonChoice2);
+        Button buttonObjectChoice3 = findViewById(R.id.buttonChoice3);
 
         /*
         Now we use setText method of our objexts to show variable values on the UI elements
