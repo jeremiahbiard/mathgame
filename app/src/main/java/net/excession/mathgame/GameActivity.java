@@ -2,12 +2,13 @@ package net.excession.mathgame;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
 
-public class GameActivity extends Activity {
+public class GameActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,16 @@ public class GameActivity extends Activity {
         buttonObjectChoice1.setText("" + correctAnswer);
         buttonObjectChoice2.setText("" + wrongAnswer1);
         buttonObjectChoice3.setText("" + wrongAnswer2);
+
+        buttonObjectChoice1.setOnClickListener(this);
+        buttonObjectChoice2.setOnClickListener(this);
+        buttonObjectChoice3.setOnClickListener(this);
+
+        @Override
+                public void onClick(View v) {
+
+        }
+
 
 
     }
